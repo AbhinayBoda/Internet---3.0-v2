@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="MyStyle.css">
+<title>Internet</title>
+</head>
+
+<body>
+  
+  <body onload="myFunction()" style="margin:0;">
+    <!------------------------------------------- Navigation--------------------------------------------->
+    <div id="navbar">
+    <a href="#default" id="logo">Internet</a>
+    <a href="WEB 1.0.html">Web 1.0</a>
+    <a href="WEB 2.0.html">Web 2.0</a>
+      <a href="#">Web 3.0</a>
+         <div id="navbar-right" class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+          <button type="GO">GO</button>
+        </form>   
+      </div>
+    </div>
+    <!--------------------- Main Content ------------------------------------------------->
+      <div id="loader"></div>
+      <div style="display:none;" id="myDiv" class="animate-bottom">
+         <div style="margin-top:210px;padding:15px 15px 250px;font-size:25px;text-align:justify;"> 
+           <h2>Web 3.0</h2>
+           <div class="slideshow-container">
+    
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="all.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="history.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="internet.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
+              <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+  <p>It refers the evolution of web utilization and interaction which includes altering the Web into a database. In enables the upgradation of back-end of the web, after a long time of focus on the front-end (Web 2.0 has mainly been about AJAX, tagging, and another front-end user-experience innovation). Web 3.0 is a term which is used to describe many evolutions of web usage and interaction among several paths. In this, data isn’t owned but instead shared, where services show different views for the same web / the same data.</p>
+  <br>
+  <p> The Semantic Web (3.0) promises to establish “the world’s information” in more reasonable way than Google can ever attain with their existing engine schema. This is particularly true from the perspective of machine conception as opposed to human understanding. The Semantic Web necessitates the use of a declarative ontological language like OWL to produce domain-specific ontologies that machines can use to reason about information and make new conclusions, not simply match keywords.</p>
+  <br>
+  <h2>Features of Web 3.0</h2>
+  <br>
+  <h3>Semantic Web</h3>
+  <p>The succeeding evolution of the Web involves the Semantic Web. The semantic web improves web technologies in demand to create, share and connect content through search and analysis based on the capability to comprehend the meaning of words, rather than on keywords or numbers.</p>
+  <br>
+  <h3>Artificial Intelligence</h3>
+  <P>Combining this capability with natural language processing, in Web 3.0, computers can distinguish information like humans in order to provide faster and more relevant results. They become more intelligent to fulfil the requirements of users.</P>
+  <br>
+  <h3>3D graphics</h3>  
+  <P>The three-dimensional design is being used widely in websites and services in Web 3.0. Museum guides, computer games, ecommerce, geospatial contexts, etc. are all examples that use 3D graphics.</P>
+  <br>
+  <h3>Connectivity</h3>
+  <P>With Web 3.0, information is more connected thanks to semantic metadata. As a result, the user experience evolves to another level of connectivity that leverages all the available information.</p>
+  <br>
+  <h3>Ubiquity</h3>
+  <p>Content is accessible by multiple applications, every device is connected to the web, the services can be used everywhere.</p>
+  </div>
+
+
+
+   <!--------------------- script for menu button ------------------------------------------------->
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "180px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+  <!--------------------- script for Sticky Navbar ------------------------------------------------->
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          document.getElementById("navbar").style.padding = "30px 10px";
+          document.getElementById("logo").style.fontSize = "25px";
+        } else {
+          document.getElementById("navbar").style.padding = "80px 10px";
+          document.getElementById("logo").style.fontSize = "35px";
+        }
+      }
+    </script>
+  
+  <!-----------------------------------CSS loader--------------------------------------------------->
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 2000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+  
+  
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+  
+
+
+<!-- Footer -->
+<footer class="footer">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  
+  <p><b><em>Copyright &copy 2020 All Rights Reserved</em></b></p>
+  
+</footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

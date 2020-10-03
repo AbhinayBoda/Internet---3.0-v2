@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="MyStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Internet</title>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+<!------------------------------------------- Navigation--------------------------------------------->
+<div id="navbar">
+<a href="#default" id="logo">Internet</a>
+<a href="WEB 1.0.html">Web 1.0</a>
+<a href="#">Web 2.0</a>
+  <a href="WEB 3.0.html">Web 3.0</a>
+     <div id="navbar-right" class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+      <button type="GO">GO</button>
+    </form>   
+  </div>
+</div>
+<!--------------------- Main Content ------------------------------------------------->
+  <div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+     <div style="margin-top:210px;padding:15px 15px 250px;font-size:25px;text-align:justify;"> 
+       <h2>Web 2.0</h2>
+       <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="all.jpg" style="width:100%">
+          <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="history.jpg" style="width:100%">
+          <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="internet.jpg" style="width:100%">
+          <div class="text">Caption Three</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+          
+  <p>Web 2.0 refers to world wide website which highlight user-generated content, usability and interoperability for end users. Web 2.0 is also called participative social web. It does not refer to a modification to any technical specification, but to modify in the way Web pages are designed and used. The transition is beneficial but it does not seem that when the changes are occurred. An interaction and collaboration with each other is allowed by Web 2.0 in a social media dialogue as creator of user-generated content in a virtual community. Web 1.0 is enhanced version of Web 2.0.</p>
+  <br>
+  <p>The web browser technologies are used in Web 2.0 development and it includes AJAX and JavaScript frameworks. Recently, AJAX and JavaScript frameworks have become a very popular means of creating web 2.0 sites.</p>
+  <br>
+  <h2>Features of Web 2.0</h2>
+  <p>1.It permits users to retrieve and classify the information collectively, and it also provides free sorting of information.</p>
+  <P>2.It provides dynamic content that is responsive to user input.</P>
+  <P>3.By means of evaluation and online commenting, information flows between site owners and site users.</P>
+  <P>4.APIs are developed to allow self-usage, such as by a software application.</p>
+  <p>5.Web access leads to an issue different from the traditional user base to a wider variety of users.Web access leads to an issue different from the traditional user base to a wider variety of users.</p>
+  <h2>Usage of Web 2.0</h2>
+  <p>The social Web contains a number of online tools and platforms where people share their perspectives, opinions, thoughts and experiences. Web 2.0 applications tend to interact much more with the end user. As such, the end user is not only a user of the application but also a participant by these 8 tools mentioned below:</p> 
+  <ol>
+  <li>Podcasting</li>
+  <li>Blogging</li>
+  <li>Tagging</li> 
+  <li>Curating wiht RSS</li> 
+  <li>Social bookmarking</li> 
+  <li>Social networking</li>
+  <li>Social media</li> 
+  <li>Web content voting</li> 
+  </ol> </div>
+
+  <!--------------------- script for menu button ------------------------------------------------->
+
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "180px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+  <!--------------------- script for Sticky Navbar ------------------------------------------------->
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          document.getElementById("navbar").style.padding = "30px 10px";
+          document.getElementById("logo").style.fontSize = "25px";
+        } else {
+          document.getElementById("navbar").style.padding = "80px 10px";
+          document.getElementById("logo").style.fontSize = "35px";
+        }
+      }
+    </script>
+  
+  <!-----------------------------------CSS loader--------------------------------------------------->
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 2000);
+    }
+    
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+    }
+    </script>
+  
+  
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+<!----------------------------------- Footer -------------------------------------------->
+<footer class="footer">
+  <p><b><em>Copyright &copy 2020 All Rights Reserved</em></b></p>
+</footer>
+
+
+</body>
+</html>
