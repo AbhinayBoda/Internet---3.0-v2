@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="MyStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Internet</title>
+</head>
+
+<body onload="myFunction()" style="margin:0;">
+<!------------------------------------------- Navigation--------------------------------------------->
+<div id="navbar">
+<a href="new.html" id="logo">Internet</a>
+<a href="WEB 1.0.html">Web 1.0</a>
+<a href="WEB 2.0.html">Web 2.0</a>
+  <a href="WEB 3.0.html">Web 3.0</a>
+   <a href="Contact.html">Contact Us</a>
+     <div id="navbar-right" class="search-container">
+      <form action="/action_page.php">
+        <input type="text" placeholder="Search.." name="search">
+      <button type="GO">GO</button>
+    </form>   
+  </div>
+</div>
+
+<!--------------------- Main Content ------------------------------------------------->
+<div id="loader"></div>
+  <div style="display:none;" id="myDiv" class="animate-bottom">
+     <div style="margin-top:210px;padding:15px 15px 250px;font-size:25px;text-align:justify;"> 
+        <h2 style="text-align:center">Profile</h2>
+
+        <div class="card">
+          <img src="My Pic.jpeg" alt="John" style="width:100%">
+          <h2>Abhinay Boda</h2>
+          <p class="title" style=" color: black;">Website Owner</p>
+          <p>MSIT Program</p>
+          <div style="margin: 24px 0;">
+            <a href="#"><i class="fa fa-instagram"></i></a> 
+            <a href="#"><i class="fa fa-twitter"></i></a>  
+            <a href="#"><i class="fa fa-linkedin"></i></a>  
+            <a href="#"><i class="fa fa-facebook"></i></a> 
+          </div>
+          <p><button class="button-contact"  >Contact</button></p>
+        </div>
+     </div>
+    </div>
+
+<!--------------------- script for Sticky Navbar ------------------------------------------------->
+  <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "30px 10px";
+        document.getElementById("logo").style.fontSize = "25px";
+      } else {
+        document.getElementById("navbar").style.padding = "80px 10px";
+        document.getElementById("logo").style.fontSize = "35px";
+      }
+    }
+  </script>
+
+<!-----------------------------------CSS loader--------------------------------------------------->
+<script>
+  var myVar;
+  
+  function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+  }
+  
+  function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+  }
+  </script>
+
+
+
+<!----------------------------- Footer ---------------------------------------------------------->
+
+<footer class="footer">
+  <p><b><em>Copyright &copy 2020 All Rights Reserved</em></b></p>
+</footer>
+
+</body>
+</html>
